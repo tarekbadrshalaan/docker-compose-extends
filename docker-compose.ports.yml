@@ -1,0 +1,9 @@
+version: '2.3'
+
+services:
+
+  web:
+    ports:
+      - 5050:5050
+
+# docker-compose -f docker-compose.yml -f docker-compose.ports.yml up 

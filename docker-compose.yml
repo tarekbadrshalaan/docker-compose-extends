@@ -1,0 +1,19 @@
+version: '2.3'
+
+services:
+
+  web:
+    build:
+      context: ./webapp
+    links:
+      - db
+      - cache
+
+  db:
+    image: postgres:latest
+
+  cache:
+    image: redis:latest
+
+# docker-compose down && docker-compose build && docker-compose up
+
